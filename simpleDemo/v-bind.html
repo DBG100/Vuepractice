@@ -7,6 +7,11 @@
 <script type="text/javascript" src="../lib/vue.js"></script>
 <body>
     <div id="app">
+        <!--
+            v-bind属性被称为指令，指令带有前缀v-，以表示它们是Vue提供的特殊属性。
+            它们会在渲染的DOM上应用特殊的响应式行为。
+            控制台输入 app2.message = '新消息'，就会再一次看到这个绑定了 title 属性的 HTML 已经进行了更新。
+        -->
         <span v-bind:title="message">
             鼠标悬停几秒钟查看此处动态绑定提示信息！
         </span>
