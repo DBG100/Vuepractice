@@ -1,0 +1,22 @@
+JS原生阻止事件冒泡
+    ev.cancleBubble = true;
+JS原生阻止默认事件
+    ev.preventDefault();
+Vue事件
+    v-on:click = ''
+    @click = ''
+    Vue事件阻止事件冒泡 v-on:click.stop   @click.stop
+    Vue事件阻止默认事件 v-on:click.prevent   @click.prevent
+
+键盘事件：
+    @keydown @keyup
+    @keydown.13  @keydown.enter @keydown.up  <!--
+        回车键的keycode=13
+        回车键：.13  .enter
+    --!>
+
+v-bind:src=''可简写成:src=''
+
+class和style
+    :class="[red]" red是数据
+    :class="[red,b,c,d]" 

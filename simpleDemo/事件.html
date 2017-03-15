@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+</head>
+<script type="text/javascript" src="../lib/vue.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        new Vue({
+            el: '#container',
+            data: {
+
+            },
+            methods: {
+                show: function () {
+                    alert(1);
+                }
+            }
+        });
+    };
+
+</script>
+<body>
+    <div id="container">
+        <input type="button" id="btn" value="按钮" @click="show()">
+    </div>
+</body>
+</html>
