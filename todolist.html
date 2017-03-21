@@ -30,6 +30,7 @@
                         this.age = "";
                     },
                     judgeDeleteOne: function () {
+                        this.nowIndex = this.myData.index;
                         this.deletes = '确认删除吗？';
                     },
                     judgeDeleteAll: function () {
@@ -78,7 +79,7 @@
                 <td>{{index+1}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.age}}</td>
-                <td><input type="button" value="删除" class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=index;judgeDeleteOne()"></td>
+                <td><input type="button" value="删除" class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="judgeDeleteOne()"></td>
             </tr>
             <!--myData长度不等于0时显示-->
             <tr v-show="myData.length != 0">
