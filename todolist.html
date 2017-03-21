@@ -29,9 +29,13 @@
                         this.username = "";
                         this.age = "";
                     },
-                    judgeDelete: function () {
-                        this.nowIndex=-2;
-                        this.deletes ='确认删除全部吗？';
+                    judgeDeleteOne: function () {
+                        this.deletes = '确认删除吗？';
+                    },
+                    judgeDeleteAll: function () {
+                        this.nowIndex = -2;
+                        this.deletes = '确认删除全部吗？';
+
                     },
                     deleteMsg: function (n) {
                         if(n == -2){
@@ -74,12 +78,12 @@
                 <td>{{index+1}}</td>
                 <td>{{item.name}}</td>
                 <td>{{item.age}}</td>
-                <td><input type="button" value="删除" class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=index"></td>
+                <td><input type="button" value="删除" class="btn btn-danger" data-toggle="modal" data-target="#layer" v-on:click="nowIndex=index;judgeDeleteOne()"></td>
             </tr>
             <!--myData长度不等于0时显示-->
             <tr v-show="myData.length != 0">
                 <td colspan="4" class="text-right">
-                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer" v-on:click="judgeDelete()">删除全部</button>
+                    <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer" v-on:click="judgeDeleteAll()">删除全部</button>
                 </td>
             </tr>
             <!--myData长度等于0时显示-->
