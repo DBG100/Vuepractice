@@ -27,5 +27,8 @@ Vue事件
 v-bind:src=''可简写成:src=''
 
 class和style
-    :class="[red]" red是数据
-    :class="[red,b,c,d]"
+    :class="[red,blue]" red是data里的数据
+    :class="{red:true,blue:true}"或者"{red:a,blue:b}" a、b是data里的数据 a:true b:true
+    :class="json"
+    :style="{color:'red'}"
+    :style="[c,d]" c、d是json
