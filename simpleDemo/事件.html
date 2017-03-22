@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>事件</title>
+    <style type="text/css">
+        .red{
+            color: red;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
 </head>
 <script type="text/javascript" src="../lib/vue.js"></script>
 <script type="text/javascript">
@@ -10,7 +18,17 @@
         new Vue({
             el: '#container',
             data: {
-                url: "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png"
+                url: "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png",
+                red: 'red',
+                blue: 'blue',
+                a: true,
+                b: true,
+                json: {
+                    red: true,
+                    blue: true
+                },
+                c: {color: 'red'},
+                d: {backgroundColor: 'blue'}
             },
             methods: {
                 show: function () {
@@ -29,6 +47,12 @@
         <input type="button" id="btn" value="按钮" @click="show()">
         <input type="text" id="txt" @keydown.67 = "showKeyEve()">
         <img v-bind:src="url" alt="">
+        <strong :class="[red,blue]">文字一...</strong>
+        <strong :class="{red:a,blue:b}">文字二...</strong>
+        <strong :class="json">文字三...</strong>
+        <strong :style="{color:red}">文字四...</strong>
+        <strong :style="[c]">文字五...</strong>
+        <strong :style="[c,d]">文字六...</strong>
     </div>
 </body>
 </html>
