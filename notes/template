@@ -1,0 +1,8 @@
+绑定数据
+    v-model="msg"
+    <p v-once>{{msg}}</p>  只绑定一次
+    v-html 转义输入的代码 绑定在view上例如<p v-html="msg">{{msg}}<p>
+
+内置过滤器
+    text.toUpperCase()
+    text[0].toUpperCase() + text.slice(1)}}
