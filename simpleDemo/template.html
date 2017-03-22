@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+</head>
+<script type="text/javascript" src="../lib/vue.js"></script>
+<script type="text/javascript">
+    window.onload=function () {
+        new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello Vue!',
+                html:'转义',
+                a: 'welcome'
+            }
+        })
+    };
+</script>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        <br>
+        <p>{{msg}}</p>
+        <br>
+        <p v-once>{{msg}}</p>
+        <input type="text" v-model="html">
+        <br>
+        <p>{{html}}</p>
+        <br>
+        <p v-html="html">{{html}}</p>
+        <input type="text" v-model="a">
+        <br>
+        <p>{{a.toUpperCase()}}</p>
+        <p>{{a[0].toUpperCase() + a.slice(1)}}</p>
+    </div>
+</body>
+</html>
