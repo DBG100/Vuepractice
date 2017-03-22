@@ -7,6 +7,15 @@ Vue事件
     @click = ''
     Vue事件阻止事件冒泡 v-on:click.stop   @click.stop
     Vue事件阻止默认事件 v-on:click.prevent   @click.prevent
+    @contextmenu 右键
+    @keydown
+    @keyup
+    @keyup.keycode @keydown.keycode
+    例如（@keydown一样） @keyup.13
+    还可以@keyup.enter
+    上下左右：@keyup.up/down/left/right
+    注意：没有@keyup.a/b/c...
+
 
 键盘事件：
     @keydown @keyup
@@ -19,4 +28,4 @@ v-bind:src=''可简写成:src=''
 
 class和style
     :class="[red]" red是数据
-    :class="[red,b,c,d]" 
+    :class="[red,b,c,d]"
