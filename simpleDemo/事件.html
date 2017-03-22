@@ -10,10 +10,13 @@
         new Vue({
             el: '#container',
             data: {
-
+                url: "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png"
             },
             methods: {
                 show: function () {
+                    alert(1);
+                },
+                showKeyEve: function () {
                     alert(1);
                 }
             }
@@ -24,6 +27,8 @@
 <body>
     <div id="container">
         <input type="button" id="btn" value="按钮" @click="show()">
+        <input type="text" id="txt" @keydown.67 = "showKeyEve()">
+        <img v-bind:src="url" alt="">
     </div>
 </body>
 </html>
